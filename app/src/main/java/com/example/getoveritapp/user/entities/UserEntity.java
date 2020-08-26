@@ -1,4 +1,4 @@
-package com.example.getoveritapp.entities;
+package com.example.getoveritapp.user.entities;
 
 
 import java.util.List;
