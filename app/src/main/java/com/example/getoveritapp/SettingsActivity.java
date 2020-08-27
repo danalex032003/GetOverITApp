@@ -35,6 +35,14 @@ public class SettingsActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        cardInfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsActivity.this, CardActivity.class);
+                startActivity(intent);
+            }
+        });
+
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
