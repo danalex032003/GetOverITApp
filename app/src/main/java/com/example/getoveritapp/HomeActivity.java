@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageButton profileImageButton;
+    private ImageButton profileImageButton, customizationImageButton, hiringImageButton, settingsImageButton;
 
     private FirebaseAuth firebaseAuth;
 
@@ -24,6 +24,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         profileImageButton = findViewById(R.id.profileHomePageImageButton);
+        customizationImageButton = findViewById(R.id.customizationHomePageImageButton);
+        hiringImageButton = findViewById(R.id.hiringHomePageImageButton);
+        settingsImageButton = findViewById(R.id.settingsHomePageImageButton);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -31,6 +34,28 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        customizationImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        hiringImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        settingsImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });
