@@ -8,53 +8,38 @@ public class UserEntity {
     private String password;
     private String username;
     private String name;
-    private Integer typeOfUser;
-    private List<UserEntity> userEntities;
+    private Integer type;
 
-    public UserEntity(String email, String password, String username, String name, Integer typeOfUser, List<UserEntity> userEntities) {
+    public UserEntity(String email, String password, String username, String name, Integer type) {
         this.email = email;
         this.password = password;
         this.username = username;
         this.name = name;
-        this.typeOfUser = typeOfUser;
-        this.userEntities = userEntities;
-    }
-
-    public UserEntity(String email, String password, String username, String name) {
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.name = name;
-    }
-
-    public UserEntity(String email, String password, String username) {
-        this.email = email;
-        this.password = password;
-        this.username = username;
+        this.type = type;
     }
 
     public UserEntity() {
 
     }
 
-    public String getEmail(String email) {
-        return this.email;
+    public String getEmail() {
+        return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getPassword(String password) {
-        return this.password;
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public String getUsername(String username) {
-        return this.username;
+    public String getUsername() {
+        return username;
     }
 
     public void setUsername(String username) {
@@ -69,11 +54,11 @@ public class UserEntity {
         this.name = name;
     }
 
-    public Integer getTypeOfUser() {
-        return typeOfUser;
+    public Integer getType() {
+        return type;
     }
 
-    public void setTypeOfUser(Integer typeOfUser) {
-        this.typeOfUser = typeOfUser;
+    public void setType(Integer type) {
+        this.type = type;
     }
 }
