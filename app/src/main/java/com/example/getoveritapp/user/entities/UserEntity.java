@@ -1,21 +1,21 @@
 package com.example.getoveritapp.user.entities;
 
 
-import java.util.List;
-
 public class UserEntity {
     private String email;
     private String password;
     private String username;
     private String name;
-    private Integer type;
+    private String type;
+    private boolean isVisible;
 
-    public UserEntity(String email, String password, String username, String name, Integer type) {
+    public UserEntity(String email, String password, String username, String name, String type, boolean isVisible) {
         this.email = email;
         this.password = password;
         this.username = username;
         this.name = name;
         this.type = type;
+        this.isVisible = isVisible;
     }
 
     public UserEntity() {
@@ -54,11 +54,19 @@ public class UserEntity {
         this.name = name;
     }
 
-    public Integer getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(String type) {
         this.type = type;
+    }
+
+    public boolean isVisible() {
+        return isVisible;
+    }
+
+    public void setVisible(boolean visible) {
+        isVisible = visible;
     }
 }

@@ -170,6 +170,4 @@
         android:text="update"
         android:textColor="@android:color/white" />
 
-
-
 </LinearLayout>
