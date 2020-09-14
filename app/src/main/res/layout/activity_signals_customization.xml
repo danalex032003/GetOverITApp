@@ -10,14 +10,25 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/colorDarkGreen"/>
+        android:background="@color/colorDarkGreen">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Choose an option"
+            android:textColor="@android:color/white"
+            android:textSize="50dp"
+            android:fontFamily="@font/barika"
+            android:gravity="center"/>
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/signalsListView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:divider="@color/colorDarkGreen"
-        android:dividerHeight="4dp">
+        android:dividerHeight="4dp"
+        android:clickable="true">
 
     </ListView>
 
