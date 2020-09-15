@@ -93,6 +93,10 @@ public class HomeActivity extends AppCompatActivity {
                     Intent intent = new Intent(HomeActivity.this, HiringActivity.class);
                     startActivity(intent);
                 }
+                else {
+                    Intent intent = new Intent(HomeActivity.this, SetupProfileForHiringActivity.class);
+                    startActivity(intent);
+                }
 
             }
         });
