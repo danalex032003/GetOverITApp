@@ -125,6 +125,8 @@ public class RegisterActivity extends AppCompatActivity {
                             user.put("name", name);
                             user.put("type", typeOfUser);
                             user.put("isVisible", false);
+                            user.put("description", "");
+                            user.put("phone", "");
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

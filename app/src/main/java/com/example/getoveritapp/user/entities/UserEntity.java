@@ -8,14 +8,18 @@ public class UserEntity {
     private String name;
     private String type;
     private boolean isVisible;
+    private String description;
+    private String phone;
 
-    public UserEntity(String email, String password, String username, String name, String type, boolean isVisible) {
+    public UserEntity(String email, String password, String username, String name, String type, boolean isVisible, String description, String phone) {
         this.email = email;
         this.password = password;
         this.username = username;
         this.name = name;
         this.type = type;
         this.isVisible = isVisible;
+        this.description = description;
+        this.phone = phone;
     }
 
     public UserEntity() {
