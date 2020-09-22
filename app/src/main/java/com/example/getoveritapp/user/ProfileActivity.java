@@ -51,7 +51,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         nameEditText = findViewById(R.id.nameProfileEditText);
         usernameEditText = findViewById(R.id.usernameProfileEditText);
-        emailEditText = findViewById(R.id.emailProfileEditText);
 
         updateButton = findViewById(R.id.updateProfileButton);
 
@@ -69,43 +68,23 @@ public class ProfileActivity extends AppCompatActivity {
 
                 nameEditText.setText(documentSnapshot.getString("name"));
                 usernameEditText.setText(documentSnapshot.getString("username"));
-                emailEditText.setText(documentSnapshot.getString("email"));
             }
         });
 
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String email = emailEditText.getText().toString().trim();
                 final String username = usernameEditText.getText().toString().trim();
                 final String name = nameEditText.getText().toString();
 
-                if (TextUtils.isEmpty(email)) {
-                    emailEditText.setError("Enter an email!");
-                    return;
-                }
-
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-                user.updateEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-
-                    }
-                });
-
                 documentReference.update("name", name);
                 documentReference.update("username", username);
-                documentReference.update("email", email);
 
                 MessageDisplayer.message(getApplicationContext(), "User updated!");
 
                 Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
                 startActivity(intent);
-
             }
         });
-
-
     }
 }

@@ -17,9 +17,9 @@
             android:id="@+id/cyclinGoTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/barika"
+            android:fontFamily="@font/roboto_regular"
             android:gravity="center"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="CyclinGo"
             android:textSize="75dp"
             android:textColor="@android:color/white"/>

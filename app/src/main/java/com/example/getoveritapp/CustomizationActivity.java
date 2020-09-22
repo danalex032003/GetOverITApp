@@ -34,7 +34,7 @@ public class CustomizationActivity extends AppCompatActivity {
         logoTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MessageDisplayer.message(CustomizationActivity.this, "Logo clicked!");
+
             }
         });
     }

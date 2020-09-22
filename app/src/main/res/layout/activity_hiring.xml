@@ -16,7 +16,7 @@
             android:id="@+id/choseHiringTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@font/barika"
+            android:fontFamily="@font/roboto_regular"
             android:gravity="center"
             android:text="Chose a new employee"
             android:textColor="@android:color/white"
