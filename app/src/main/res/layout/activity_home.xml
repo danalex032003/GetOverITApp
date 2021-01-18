@@ -14,7 +14,7 @@
         android:adjustViewBounds="true"
         android:scaleX="1"
         android:scaleY="1"
-        android:src="@drawable/cyclingo_circled_logo"
+        android:src="@drawable/ic_circled_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.getoveritapp.HomeActivity;
+import com.example.getoveritapp.HomePageActivity;
 import com.example.getoveritapp.R;
 import com.example.getoveritapp.user.entities.UserEntity;
 import com.example.getoveritapp.messages.MessageDisplayer;
@@ -76,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         if (firebaseAuth.getCurrentUser() != null) {
-            Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+            Intent intent = new Intent(RegisterActivity.this, HomePageActivity.class);
             startActivity(intent);
             finish();
         }
@@ -135,7 +136,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 }
                             });
 
-                            Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(RegisterActivity.this, HomePageActivity.class);
                             startActivity(intent);
                         }
                         else {
