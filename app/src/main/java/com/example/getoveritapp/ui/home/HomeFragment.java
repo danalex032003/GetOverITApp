@@ -19,16 +19,20 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.getoveritapp.R;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.UUID;
 
 public class HomeFragment extends Fragment {
 
     private static final UUID mUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private static final String ADDRESS = "98:D3:71:F6:11:BE";
+    private static final String STRING_SENT = "92";
 
     private HomeViewModel homeViewModel;
 
     private BluetoothAdapter bluetoothAdapter;
+    BluetoothSocket bluetoothSocket = null;
+    private OutputStream outputStream;
 
     private ImageView connect;
 
@@ -46,13 +50,14 @@ public class HomeFragment extends Fragment {
 
                 bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
-                BluetoothSocket bluetoothSocket = null;
                 try {
                     BluetoothDevice hc05 = bluetoothAdapter.getRemoteDevice(ADDRESS);
                     bluetoothSocket = hc05.createRfcommSocketToServiceRecord(mUUID);
                     bluetoothAdapter.cancelDiscovery();
                     bluetoothSocket.connect();
                     System.out.println(bluetoothSocket.isConnected());
+                    outputStream = bluetoothSocket.getOutputStream();
+                    write(STRING_SENT);
 
                 }
                 catch (IOException e) {
@@ -63,5 +68,13 @@ public class HomeFragment extends Fragment {
         });
 
         return root;
+    }
+
+    public void write(String s) {
+        try {
+            bluetoothSocket.getOutputStream().write(s.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
