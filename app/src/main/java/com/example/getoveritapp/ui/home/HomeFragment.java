@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.getoveritapp.R;
@@ -36,9 +35,12 @@ public class HomeFragment extends Fragment {
     BluetoothSocket bluetoothSocket = null;
     private OutputStream outputStream;
 
-    private ImageView connect;
+    private Button connect;
+    private ImageView backWheelIcon, frontWheelIcon;
     private EditText optionEditText;
     private Button sendOption;
+
+    private Animation rotateAnimation;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,13 +51,16 @@ public class HomeFragment extends Fragment {
 
         connect = root.findViewById(R.id.bluetooth_connect);
         optionEditText = root.findViewById(R.id.option_edit_text);
-        sendOption = root.findViewById(R.id.nu_inteleg_ce_are);
+        sendOption = root.findViewById(R.id.send_option_button);
 
+        backWheelIcon = root.findViewById(R.id.back_wheel_icon);
+        frontWheelIcon = root.findViewById(R.id.front_wheel_icon);
 
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                rotateAnimation();
                 bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
                 try {
@@ -91,5 +96,11 @@ public class HomeFragment extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void rotateAnimation() {
+        rotateAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.wheel_animation);
+        backWheelIcon.startAnimation(rotateAnimation);
+        frontWheelIcon.startAnimation(rotateAnimation);
     }
 }

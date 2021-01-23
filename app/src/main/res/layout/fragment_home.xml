@@ -6,6 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="254dp"
+        android:background="@drawable/fragment_home_bottom_view"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_view">
+
+        <ImageView
+            android:id="@+id/bicycle_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_bicycle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/back_wheel_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_bicycle_wheel"
+            android:layout_marginEnd="97dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/front_wheel_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_bicycle_wheel"
+            android:layout_marginStart="79dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="wrap_content"
@@ -18,19 +64,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
+    <Button
         android:id="@+id/bluetooth_connect"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_connect"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/connect_button_backgroud"
+        android:text="Connect"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="@id/bottom_view"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/colorBlack" />
 
     <Button
-        android:id="@+id/nu_inteleg_ce_are"
+        android:id="@+id/send_option_button"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,5 +91,5 @@
         android:layout_height="wrap_content"
         android:textSize="25dp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/nu_inteleg_ce_are"/>
+        app:layout_constraintBottom_toTopOf="@id/send_option_button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

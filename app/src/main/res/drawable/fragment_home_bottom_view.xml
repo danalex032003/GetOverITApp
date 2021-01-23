@@ -1,0 +1,24 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:height="200dp">
+
+        <shape
+            android:shape="rectangle">
+
+            <solid
+                android:color="@color/colorLightGreen"/>
+        </shape>
+
+    </item>
+
+    <item
+        android:drawable="@drawable/ripple_arch"
+        android:top="200dp"
+        android:height="55dp">
+
+    </item>
+
+
+</layer-list>
