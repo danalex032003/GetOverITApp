@@ -77,19 +77,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/colorBlack" />
 
-    <Button
-        android:id="@+id/send_option_button"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <EditText
-        android:id="@+id/option_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/send_option_button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

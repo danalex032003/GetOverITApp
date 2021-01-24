@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
     private static final UUID mUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private static final String ADDRESS = "98:D3:71:F6:11:BE";
-    private static final int INT_SENT = 8;
+    private static final int INT_SENT = 1;
 
     private HomeViewModel homeViewModel;
 
@@ -37,8 +37,6 @@ public class HomeFragment extends Fragment {
 
     private Button connect;
     private ImageView backWheelIcon, frontWheelIcon;
-    private EditText optionEditText;
-    private Button sendOption;
 
     private Animation rotateAnimation;
 
@@ -50,8 +48,6 @@ public class HomeFragment extends Fragment {
 
 
         connect = root.findViewById(R.id.bluetooth_connect);
-        optionEditText = root.findViewById(R.id.option_edit_text);
-        sendOption = root.findViewById(R.id.send_option_button);
 
         backWheelIcon = root.findViewById(R.id.back_wheel_icon);
         frontWheelIcon = root.findViewById(R.id.front_wheel_icon);
@@ -77,13 +73,6 @@ public class HomeFragment extends Fragment {
                     e.printStackTrace();
                 }
 
-            }
-        });
-
-        sendOption.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                write(Integer.parseInt(optionEditText.getText().toString()));
             }
         });
 
