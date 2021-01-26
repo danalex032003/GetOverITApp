@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:height="200dp">
+        android:height="250dp">
 
         <shape
             android:shape="rectangle">
@@ -15,7 +15,7 @@
 
     <item
         android:drawable="@drawable/ripple_arch"
-        android:top="200dp"
+        android:top="250dp"
         android:height="55dp">
 
     </item>

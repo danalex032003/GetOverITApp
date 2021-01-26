@@ -12,14 +12,28 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.getoveritapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_customization"
+        android:name="com.example.getoveritapp.ui.customization.CustomizationFragment"
+        android:label="Customization"
+        tools:layout="@layout/fragment_customization" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.getoveritapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_setup_progile_for_hiring"
+        android:name="com.example.getoveritapp.ui.hiring.SetupProfileForHiringFragment"
+        android:label="Hiring"
+        tools:layout="@layout/fragment_setup_profile_for_hiring" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.getoveritapp.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.getoveritapp.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+
 </navigation>
